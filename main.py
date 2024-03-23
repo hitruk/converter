@@ -6,7 +6,8 @@ from tkinter import ttk
 
 class Model:
     def __init__(self, value):
-        # допустимые значения: 0, float, int, отрицатеельные значения
+        # допустимые значения:
+        # 0, float, int, отрицатеельные значения
         self._value = value
 
     @property
@@ -15,15 +16,15 @@ class Model:
 
     @value.setter
     def value(self, x):
-        if type(x) is int or type(x) float:
+        if type(x) in [int, float]:
             self._value = x
         else:
-            raise TypeError(f'invalid data type: {value}')
+            raise TypeError(f'invalid data type: {x}')
 
-    @staticmetod
     def mi_to_km(self):
-        #  это кол-во км  
-        return mi = self._value/1.609344
+        #  ф-ция конвертирует милли в километры 
+        mi = self._value*1.609344
+        return mi
 
 
 class App(tk.Tk):
