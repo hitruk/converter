@@ -23,8 +23,8 @@ class Model:
 
     def mi_to_km(self):
         #  ф-ция конвертирует милли в километры 
-        mi = self._value*1.609344
-        return mi
+        km = self._value*1.609344
+        return km
 
 class View(ttk.Frame):
     def __init__(self, container):
